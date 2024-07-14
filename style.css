@@ -1,0 +1,227 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background-image: url("assets/Spider Man Venom HD Wallpaper On.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  color: #3b4565;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-shadow: red 5px 1px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.heroes-container {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+@keyframes border-glow {
+  0% {
+    box-shadow: 0 0 10px 5px rgba(252, 107, 107, 0.5);
+    border-color: rgb(107, 240, 252);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgb(252, 107, 107);
+    border-color: rgb(252, 107, 107);
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(252, 107, 107, 0.5);
+    border-color: rgb(107, 240, 252);
+  }
+}
+
+.hero-container {
+  border: 3px solid rgb(0, 255, 255);
+  border-radius: 10px;
+  padding: 5px;
+  width: 250px;
+  height: 300px;
+  background: radial-gradient(red, rgb(31, 31, 31));
+  padding-top: 60px;
+  animation: border-glow 2s infinite;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  box-shadow: 0px 0px 10px 5px rgb(216 255 0 / 50%);
+  border: 2px solid cyan;
+}
+
+.WinDisplay {
+  width: 80%;
+  height: 60px;
+  background-color: rgba(255, 240, 213, 0.5);
+  border-top: 2px solid rgba(255, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: translateX(-50%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateX(-50%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.hero-details {
+  margin-top: -30px;
+}
+
+.hero-details span {
+  display: flex;
+  margin: 5px 0;
+  justify-content: center;
+  color: cyan;
+  font-size: large;
+}
+
+.select-fighter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btns-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: cyan;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.start-fight {
+  display: none;
+}
+
+.hide-heroes {
+  display: none;
+}
+
+.show-winner {
+  display: none;
+}
+
+.Spiderman {
+  background-image: url("assets/Spiderman.png");
+}
+
+.Venom {
+  background-image: url("assets/Venom.png");
+}
+
+.GreenGoblin {
+  background-image: url("assets/GreenGoblin.png");
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container {
+    border: 3px solid rgb(0, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+    width: 450px;
+    height: 600px;
+    padding-top: 120px;
+  }
+
+  .hero-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .hero-details span {
+    margin: 5px 0;
+    justify-content: center;
+    color: cyan;
+    font-size: xx-large;
+  }
+
+  .btn {
+    padding: 30px 60px;
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heroes-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

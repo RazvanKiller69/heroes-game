@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEROES GAME</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon-16x16.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon-32x32.png"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Heroes Game</h1>
+      <div class="btns-container">
+        <button class="btn" id="show-heroes">SHOW HEROES</button>
+        <button class="btn hide-heroes" id="hide-heroes">HIDE HEROES</button>
+        <button class="btn start-fight" id="start-fight">START FIGHT</button>
+      </div>
+      <div class="heroes-container">
+        <div class="hero-container">
+          <div class="hero-avatar Spiderman"></div>
+          <div class="hero-details">
+            <span class="hero-name">Spiderman</span>
+            <span>Life : 75 HP</span>
+            <span>Has High Attack</span>
+          </div>
+          <button class="btn select-fighter" id="select-fighter">
+              SELECT
+            </button>
+        </div>
+        <div class="hero-container">
+          <div class="hero-avatar Venom"></div>
+          <div class="hero-details">
+            <span class="hero-name">Venom</span>
+            <span>Life : 50 HP</span>
+            <span>Has Protection</span>
+            <span></span>
+          </div>
+          <button class="btn select-fighter" id="select-fighter">
+              SELECT
+            </button>
+        </div>
+        <div class="hero-container">
+          <div class="hero-avatar GreenGoblin"></div>
+          <div class="hero-details">
+            <span class="hero-name">The Green Goblin</span>
+            <span>Life : 35 HP</span>
+            <span></span>
+            <span>Can Fly</span>
+          </div>
+          <button class="select-fighter btn" id="select-fighter">
+              SELECT
+            </button>
+        </div>
+      </div>
+      <div class="show-winner WinDisplay"></div>
+    </div>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
